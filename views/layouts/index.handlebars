@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="jssocials.css" />
+	 <link rel="stylesheet" type="text/css" href="jssocials-theme-flat.css" />
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+	<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5ad92a5622309d0013d4ef9d&product=inline-share-buttons"></script>
+
+</head>
+<body>
+	<header>
+		<img src="/images/roku.svg" alt="Roku logo" class="rokulogo">
+		<span><img src="/images/flashback.png" alt="Flashback Logo" width="200" class="flashback"></span>
+
+		<nav>
+			<ul>
+				<li><img src="/images/profile1.png" alt="Kids icon" width="20"></li>
+				<li><img src="/images/profile2.png" alt="Kids icon2" width="20"></li>
+				<li><img src="/images/User.png" alt="User icon" width="30"></li>
+				<li><img src="/images/Settings.png" alt="Settings cog" width="30"></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		{{{ body }}}
+	</main>
+
+	<footer>
+
+		<p class="copy">
+			&copy; 2018 Jeni Rozman Inc
+		</p>
+
+
+	</footer>
+  <script>
+    var appData = {
+      movies : {{{ data }}}
+    }
+  </script>
+	{{#if mainpage}}
+  	<script src="/js/main.js"></script>
+	{{/if}}
+
+	{{#if videopage}}
+		<script src="/js/videoVM.js"></script>
+	{{/if}}
+</body>
+</html>
